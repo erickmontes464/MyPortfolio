@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('font/AvenirLTStd-Roman.otf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Mollie';
+  src: url('font/Mollie\ Rocky\ DEMO.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Autour';
+  src: url('font/AutourOne-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+*,body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  transition: all 500ms;
+
+}
+.container{
+  /* position: relative; */
+  display: flex;
+  flex-direction: row;
+  background-color: #121330;
+  height: 100vh;
+  justify-content: center;
+}
+.links {
+  position: fixed ;
+  top: 15px;
+  right: 10px;
+}
+.links a {
+  font-family: 'Avenir', Times, serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  margin-right: 6rem;
+}
+.links a:hover{
+  text-decoration: underline;
+}
+#personal {
+  padding: 3%;
+  border-radius: 16rem;
+}
+#tittle{
+  font-family: 'Autour', Times, serif;
+  font-size: 110px;
+  color: #fff;
+  padding-top: 13%;
+  text-align: center;
+  
+}
+#subtittle{
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  border-top: 1px solid #fff;
+}
