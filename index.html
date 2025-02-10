@@ -4,27 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <title>My portfolio</title>
+  <title>My portfolio | Mi portafolio</title>
 </head>
 <body>
-  <div class="container">
-    <img id="personal" src="img/Perfil completo.jpeg" alt="Photo" >
-      
-    <div class="links">
+
+  <header>
+    <nav>
       <a href="#first">I'm Erick</a>
       <a href="#second">Skills</a>
       <a href="#third">Pages</a>
       <a href="#fourth">Other Proyects</a>
       <a href="#fifth">Contact</a>
-    </div>
-    <div>
-      <p id="tittle">Erick Vargas</p>
-      <p id="subtittle">System Engeneer</p>
-    </div>
-    
-  </div>
+    </nav>
+  </header>
+  <!-- main -->
+  <main class="container">
+    <img src="img/Perfil completo.jpeg" alt="Photo" >
+
+    <div class="right">
+      <p class="tittle">Hi, <br> I'm Erick Vargas Montes</p>
+
+      <div id="subtitle">
+        <p>Ingeniero de Sistemas</p>
+        <p>|</p>
+        <p>System Engeneer</p>
+      </div>
+      <div class="resume">
+
+        <h3>
+          Egresado con conocimientos como desarrollador y técnico en soporte de equipos con 2 años de 
+          experiencia laboral y 5 años de experiencia autónoma, realizando proyectos como puntos de venta y
+          realizando soporte a domicilio en mi localidad. Tengo experiencia en análisis de datos, diseño de estilos
+          y arquitectura web. Experto en el análisis y solución de problemas de software y hardware en equipos 
+          informáticos. Poseo sólidos conocimientos de Excel, SQL y POWER BI, así como del idioma ingles a nivel 
+          intermedio. Destaco por mi alta capacidad de liderazgo, adaptación y capacidad para trabajar en equipo.
+        </h3>
+        <h3>Graduate with knowledge as a developer and equipment support technician with 2 years of
+          work experience and 5 years of freelance experience, carrying out projects such as points of sale and
+          providing home support in my location. I have experience in data analysis, style design.
+          and web architecture. Expert in analyzing and solving software and hardware problems on computers
+          IT. I have solid knowledge of Excel, SQL and POWER BI, as well as the English language at the level.
+          intermediate. I stand out for my high leadership capacity, adaptation and ability to work as a team.
+        </h3>
+      </div>
+
   
-  <img id="first" src="img/Perfil completo.jpeg" alt="foto" >
+
+    </div>
+    <div class="stars" id="stars"></div>
+
+    <script>
+        // Generar estrellas dinámicamente
+        const starsContainer = document.getElementById('stars');
+        const starCount = 100; // Número de estrellas
+
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 3}px`; // Tamaño aleatorio
+            star.style.height = star.style.width;
+            star.style.top = `${Math.random() * 100}%`; // Posición vertical aleatoria
+            star.style.left = `${Math.random() * 100}%`; // Posición horizontal aleatoria
+            star.style.animationDelay = `${Math.random() * 2}s`; // Retardo aleatorio para la animación
+            starsContainer.appendChild(star);
+        }
+    </script>
+  </main>
   
+ 
+
 </body>
 </html>

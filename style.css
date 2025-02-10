@@ -9,58 +9,117 @@
   src: url('font/Mollie\ Rocky\ DEMO.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
-}
+} 
 @font-face {
   font-family: 'Autour';
   src: url('font/AutourOne-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: normal;
 }
-*,body {
-  padding: 0;
+*,body{
   margin: 0;
+  max-width: 100vw;
+  color: #fff;
   scroll-behavior: smooth;
   transition: all 500ms;
-
+  text-align: center;
 }
-.container{
-  /* position: relative; */
+body{
+  background-color: #0c0d2e;
+}
+header{
+  margin: auto;
+  background-color: #0c0d2e;
+  width: 80%;
+  height: 4rem;
+  border-bottom: 1px solid #fff;
+}
+nav {
   display: flex;
-  flex-direction: row;
-  background-color: #121330;
-  height: 100vh;
-  justify-content: center;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-.links {
-  position: fixed ;
-  top: 15px;
-  right: 10px;
-}
-.links a {
+nav a {
   font-family: 'Avenir', Times, serif;
   text-decoration: none;
   color: #fff;
   font-size: 22px;
-  margin-right: 6rem;
-}
-.links a:hover{
-  text-decoration: underline;
-}
-#personal {
-  padding: 3%;
-  border-radius: 16rem;
-}
-#tittle{
-  font-family: 'Autour', Times, serif;
-  font-size: 110px;
-  color: #fff;
-  padding-top: 13%;
-  text-align: center;
+  margin-right: 4rem;
   
 }
-#subtittle{
+nav a:hover{
+  text-decoration: underline;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  max-width: 100%;
+
+}
+.container img {
+  margin: 5%;
+  border-radius: 16em;
+  width: 30%;
+  
+}
+
+.tittle{
+  font-family: 'Autour', Times, serif;
+  font-size: 5rem;
   color: #fff;
-  text-align: center;
-  font-size: 40px;
+  margin: 9% 0;
+}
+
+#subtitle{
+  font-weight: bold;
+  font-size: 2rem;
+  color: #fff;
   border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+} 
+.resume{
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #fff;
+  width: 100%;
+}
+.resume h3 {
+  padding: 0 0.5em;
+  text-align: justify;
+}
+
+/*Starts*/
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+      opacity: 0.5;
+      transform: scale(1);
+  }
+  50% {
+      opacity: 1;
+      transform: scale(2);
+  }
 }
